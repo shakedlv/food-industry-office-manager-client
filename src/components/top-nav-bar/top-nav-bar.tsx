@@ -26,7 +26,7 @@ function TopNavBar() {
                 <div className='right'>
                     {user == null ?
                         <button className='login-btn' onClick={() => loginWithRedirect()}>Log In</button> :
-                        <UserAvatar user={user} />
+                        <UserAvatar user={user} showDropdown={true}/>
                     }
                 </div>
             </nav>

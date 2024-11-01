@@ -9,6 +9,8 @@ import {
 import LandingPage from './routes/landing-page/landing-page.tsx';
 import PricingPage from './routes/pricing-page/pricing-page.tsx';
 import { Auth0Provider } from '@auth0/auth0-react';
+import { ProtectedRoute } from './hooks/protected-route.tsx';
+import Dashboard from './routes/dashboard-pages/dashboard-page/dashboard.tsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,17 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/dashboard",
+    element: <ProtectedRoute><Dashboard /></ProtectedRoute>,
+    children: [
+      {
+        path: "",
+        element: <LandingPage />,
+      },
+
+    ],
+  },
 
 ]);
 
@@ -36,7 +49,7 @@ createRoot(document.getElementById('root')!).render(
         redirect_uri: window.location.origin
       }}
     >
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
 
     </Auth0Provider>
   </StrictMode>,
