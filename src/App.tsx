@@ -1,5 +1,5 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import LandingPageHeader from './components/landing-page-header/landing-page-header'
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     </nav>
   
     <main>
-      <LandingPageHeader/>
+      <Outlet/>
     </main>
 
     <footer>
