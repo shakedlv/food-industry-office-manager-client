@@ -21,7 +21,7 @@ nav .center {
 
 
 
-nav a {
+nav  a {
     text-align: center;
     min-width: 128px;
     font-size: 16px;
@@ -33,16 +33,16 @@ nav a {
     transition: all 0.3s ease;
 }
 
-nav a:not(:last-child):not(.logo) {
+nav .center a:not(:last-child) {
     border-right: 1px solid #bbbbbb;
 }
 
-nav a:hover:not(.logo) {
+nav .center a:hover {
     color: #ffffff;
     font-weight: bold;
 }
 
-nav .logo {
+nav  .logo {
     font-size: 28px;
     font-weight: bold;
     color: #e91e63;
@@ -50,7 +50,8 @@ nav .logo {
 
 }
 
-nav .login-btn {
+.login-btn {
+    color: white;
     width: 128px;
     height: 40px;
     align-items: center;
