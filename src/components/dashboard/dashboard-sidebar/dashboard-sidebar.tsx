@@ -1,5 +1,4 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import UserAvatar from '../user-avatar/user-avatar'
 import './dashboard-sidebar.css'
 import {
     MdOutlineSpaceDashboard, MdOutlineInventory, MdOutlineReceipt
@@ -7,6 +6,7 @@ import {
 } from "react-icons/md";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
+import UserAvatar from '../../user-avatar/user-avatar';
 
 function DashboardSidebar() {
     const { user } = useAuth0();
