@@ -11,6 +11,7 @@ import PricingPage from './routes/pricing-page/pricing-page.tsx';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ProtectedRoute } from './hooks/protected-route.tsx';
 import Dashboard from './routes/dashboard-pages/dashboard-page/dashboard.tsx';
+import Overview from './routes/dashboard-pages/overview/overview.tsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <LandingPage />,
+        element: <Overview />,
       },
 
     ],
