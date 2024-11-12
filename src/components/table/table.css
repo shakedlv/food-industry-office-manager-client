@@ -1,0 +1,26 @@
+.table{
+    table{
+        width: 100%;
+        height: fit-content;
+        text-align: left;
+        background: #1e1e1e;
+    }
+    table tr{
+        height: 32px;
+    }
+    table tr:hover:not(:first-child){
+        background: #7c7b7b;
+        cursor: pointer;
+    }
+    table th:last-child{
+        width: 64px;   
+    }
+    table th:first-child , table td:first-child{
+        width: 32px; 
+        text-align: center;  
+    }
+    table tr:nth-child(even)
+    {
+        background: #3a3939;
+    }
+}

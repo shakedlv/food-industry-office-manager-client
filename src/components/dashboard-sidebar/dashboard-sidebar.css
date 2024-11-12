@@ -6,14 +6,15 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 8px ;
+    padding-bottom: 8px;
 }
 
-.sidebar ul {
-    list-style-type: none;
+.sidebar div {
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebar ul li {
+.sidebar div a {
     height: 64px;
     width: 64px;
     display: flex;
@@ -21,16 +22,18 @@ aside {
     justify-content: center;
     align-items: center;
     font-size: 12px;
+    text-decoration: none;
+    color:white;
 }
 
-.sidebar ul li:hover{
+.sidebar div a:hover {
     background-color: #1e1e1e;
     border-right: 2px solid white;
 
 }
 
 
-.sidebar ul li:not(:last-child) {
+.sidebar div a:not(:last-child) {
     height: 64px;
     border-bottom: 2px solid #1e1e1e;
 

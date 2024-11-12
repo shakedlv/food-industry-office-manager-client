@@ -6,33 +6,34 @@ import {
     , MdOutlineAnalytics
 } from "react-icons/md";
 import { RiCalendarScheduleLine } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 function DashboardSidebar() {
     const { user } = useAuth0();
     return (
         <aside className='sidebar'>
-            <ul>
-                <li>
+            <div>
+                <Link to={"/dashboard"}>
                     <MdOutlineSpaceDashboard size={32} />
                     <span>Dashboard</span>
-                </li>
-                <li>
+                </Link>
+                <Link to={"/dashboard/inventory"}>
                     <MdOutlineInventory size={32} />
                     <span>Inventory</span>
-                </li>
-                <li>
+                </Link>
+                <Link to={"/dashboard/recipes"}>
                     <MdOutlineReceipt size={32} />
                     <span>Recipes</span>
-                </li>
-                <li>
+                </Link>
+                <Link to={"/dashboard/analytics"}>
                     <MdOutlineAnalytics size={32} />
                     <span>Analytics</span>
-                </li>
-                <li>
+                </Link>
+                <Link to={"/dashboard/shedule"}>
                     <RiCalendarScheduleLine size={32} />
                     <span>Schedule</span>
-                </li>
-            </ul>
+                </Link>
+            </div>
             <div>
                 {user ? <UserAvatar user={user} /> : ""}
 

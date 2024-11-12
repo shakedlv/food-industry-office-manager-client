@@ -11,6 +11,8 @@ import PricingPage from './routes/pricing-page/pricing-page.tsx';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ProtectedRoute } from './hooks/protected-route.tsx';
 import Dashboard from './routes/dashboard-pages/dashboard-page/dashboard.tsx';
+import Recipes from './routes/dashboard-pages/recipes/recipes.tsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,10 +36,12 @@ const router = createBrowserRouter([
         path: "",
         element: <LandingPage />,
       },
-
+      {
+        path: "/dashboard/recipes",
+        element: <Recipes />,
+      },
     ],
   },
-
 ]);
 
 createRoot(document.getElementById('root')!).render(
